@@ -1,6 +1,6 @@
 # DeckRogue-Demo
 
-sts2拆解[拆解](https://app.notion.com/p/Deconstruction-Slay-The-Spire-2-3862fc0d650380f49a6fd67dfc5aa581?source=copy_link)
+sts2拆解案：[拆解](https://app.notion.com/p/Deconstruction-Slay-The-Spire-2-3862fc0d650380f49a6fd67dfc5aa581?source=copy_link)
 
 # VOID DESCENT — 执行级策划案 v1.0
 
