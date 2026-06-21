@@ -1,5 +1,6 @@
 # DeckRogue-Demo
 
+sts2拆解[拆解](https://app.notion.com/p/Deconstruction-Slay-The-Spire-2-3862fc0d650380f49a6fd67dfc5aa581?source=copy_link)
 
 # VOID DESCENT — 执行级策划案 v1.0
 
@@ -121,7 +122,7 @@ BaseBlock: int           // 基础护盾值
 
 BaseEffectValue: int     // 附加效果值（如抽牌数、治疗量等）
 
-EffectList: List`<Effect>` // 效果列表
+EffectList: List `<Effect>` // 效果列表
 
 IsUpgraded: bool         // 是否已升级
 
@@ -179,19 +180,19 @@ HandSizeMax: int          // 手牌上限（默认10）
 
 Gold: int
 
-CurrentDeck: List`<CardID>`  // 牌组（所有卡牌）
+CurrentDeck: List `<CardID>`  // 牌组（所有卡牌）
 
-CurrentHand: List`<Card>`    // 当前手牌
+CurrentHand: List `<Card>`    // 当前手牌
 
-DrawPile: List`<CardID>`     // 抽牌堆
+DrawPile: List `<CardID>`     // 抽牌堆
 
-DiscardPile: List`<CardID>`  // 弃牌堆
+DiscardPile: List `<CardID>`  // 弃牌堆
 
-PotionSlots: List`<Potion>`  // 道具栏位（3格）
+PotionSlots: List `<Potion>`  // 道具栏位（3格）
 
-EquippedRelics: List`<Relic>` // 已装备遗物（最多3件）
+EquippedRelics: List `<Relic>` // 已装备遗物（最多3件）
 
-ActiveBlessings: List`<Blessing>` // 当前激活的祝福
+ActiveBlessings: List `<Blessing>` // 当前激活的祝福
 
 CurrentIntent: Intent     // 当前回合敌人意图
 
@@ -291,13 +292,13 @@ IsLocked: bool            // 是否已锁定（未满足前置条件）
 
 IsVisited: bool           // 是否已访问
 
-AvailablePaths: List`<NodeID>` // 从该节点可达的下一节点列表
+AvailablePaths: List `<NodeID>` // 从该节点可达的下一节点列表
 
 **Map（维度地图）**
 
 MapID: string             // 对应Act编号 Act_1 ~ Act_5
 
-AllNodes: List`<Node>`
+AllNodes: List `<Node>`
 
 StartNode: NodeID         // 起点节点
 
@@ -305,11 +306,11 @@ BossNode: NodeID          // Boss节点（Act_5有3个Boss节点）
 
 CurrentNode: NodeID       // 玩家当前所在节点
 
-VisitedNodes: List`<NodeID>` // 已访问节点列表
+VisitedNodes: List `<NodeID>` // 已访问节点列表
 
-AvailableNodes: List`<NodeID>` // 当前可选的下一节点
+AvailableNodes: List `<NodeID>` // 当前可选的下一节点
 
-NodePlacementRules: List`<PlacementRule>` // 节点放置约束规则
+NodePlacementRules: List `<PlacementRule>` // 节点放置约束规则
 
 **Combat（战斗）**
 
@@ -317,7 +318,7 @@ CombatID: string
 
 CombatType: enum          // COMBAT / ELITE / BOSS
 
-EnemyParty: List`<Enemy>`   // 敌方单位列表（最多3个）
+EnemyParty: List `<Enemy>`   // 敌方单位列表（最多3个）
 
 Player: Character         // 玩家角色实体
 
@@ -331,9 +332,9 @@ VictoryCondition: bool    // 是否满足胜利条件
 
 DefeatCondition: bool     // 是否满足失败条件
 
-CurrentRewards: List`<Reward>` // 战斗结束奖励列表
+CurrentRewards: List `<Reward>` // 战斗结束奖励列表
 
-CombatLog: List`<CombatEvent>` // 战斗事件日志
+CombatLog: List `<CombatEvent>` // 战斗事件日志
 
 **Enemy（敌人）**
 
@@ -351,7 +352,7 @@ CurrentShield: int         // 当前护盾值
 
 CurrentIntent: Intent      // 当前意图
 
-StatusEffects: List`<StatusEffect>` // 状态效果列表
+StatusEffects: List `<StatusEffect>` // 状态效果列表
 
 IsDead: bool
 
