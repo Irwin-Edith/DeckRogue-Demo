@@ -1,0 +1,2 @@
+id,bossName,maxHp,usesBloodDebtMechanic,description,spritePath
+abyss_lord,深渊领主,150,true,深渊的统治者，掌控血契之力的古老存在,Sprites/Enemies/AbyssLord

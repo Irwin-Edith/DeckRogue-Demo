@@ -1,0 +1,201 @@
+{
+  "normalEnemies": [
+    {
+      "id": "goblin",
+      "enemyName": "哥布林",
+      "type": "Normal",
+      "maxHp": 20,
+      "chapter1Hp": 20,
+      "chapter2Hp": 30,
+      "baseDamage": 8,
+      "blockAmount": 5,
+      "actionPattern": [
+        { "turn": 1, "intent": { "type": "Attack", "value": 8, "times": 1, "description": "攻击 8" } },
+        { "turn": 2, "intent": { "type": "Attack", "value": 8, "times": 1, "description": "攻击 8" } },
+        { "turn": 3, "intent": { "type": "Defend", "value": 5, "times": 1, "description": "防御 +5 格挡" } }
+      ],
+      "description": "狡猾的哥布林，会伺机攻击",
+      "spritePath": "Sprites/Enemies/Goblin",
+      "hasSpecialMechanic": false,
+      "specialMechanicDesc": ""
+    },
+    {
+      "id": "skeleton",
+      "enemyName": "骷髅兵",
+      "type": "Normal",
+      "maxHp": 25,
+      "chapter1Hp": 25,
+      "chapter2Hp": 38,
+      "baseDamage": 10,
+      "blockAmount": 8,
+      "actionPattern": [
+        { "turn": 1, "intent": { "type": "Attack", "value": 10, "times": 1, "description": "攻击 10" } },
+        { "turn": 2, "intent": { "type": "Attack", "value": 10, "times": 1, "description": "攻击 10" } },
+        { "turn": 3, "intent": { "type": "Buff", "value": 0, "times": 1, "description": "蓄力中..." } },
+        { "turn": 4, "intent": { "type": "Attack", "value": 20, "times": 1, "description": "重击 20!" } }
+      ],
+      "description": "会蓄力释放重击的骷髅战士",
+      "spritePath": "Sprites/Enemies/Skeleton",
+      "hasSpecialMechanic": true,
+      "specialMechanicDesc": "蓄力：第3回合蓄力，第4回合造成双倍伤害攻击"
+    },
+    {
+      "id": "bat_swarm",
+      "enemyName": "蝙蝠群",
+      "type": "Normal",
+      "maxHp": 15,
+      "chapter1Hp": 15,
+      "chapter2Hp": 22,
+      "baseDamage": 4,
+      "blockAmount": 0,
+      "actionPattern": [
+        { "turn": 1, "intent": { "type": "MultiAttack", "value": 4, "times": 2, "description": "多段攻击 4x2" } },
+        { "turn": 2, "intent": { "type": "Attack", "value": 6, "times": 1, "description": "攻击 6" } },
+        { "turn": 3, "intent": { "type": "MultiAttack", "value": 4, "times": 3, "description": "多段攻击 4x3" } }
+      ],
+      "description": "成群的蝙蝠，高频率低伤害",
+      "spritePath": "Sprites/Enemies/BatSwarm",
+      "hasSpecialMechanic": false,
+      "specialMechanicDesc": ""
+    },
+    {
+      "id": "slime",
+      "enemyName": "史莱姆",
+      "type": "Normal",
+      "maxHp": 30,
+      "chapter1Hp": 30,
+      "chapter2Hp": 45,
+      "baseDamage": 8,
+      "blockAmount": 6,
+      "actionPattern": [
+        { "turn": 1, "intent": { "type": "Attack", "value": 5, "times": 1, "description": "攻击 5" } },
+        { "turn": 2, "intent": { "type": "Special", "value": 0, "times": 0, "description": "分裂! 生成小型史莱姆" } },
+        { "turn": 3, "intent": { "type": "Attack", "value": 8, "times": 1, "description": "攻击 8" } }
+      ],
+      "description": "会分裂的史莱姆，时间压力型敌人",
+      "spritePath": "Sprites/Enemies/Slime",
+      "hasSpecialMechanic": true,
+      "specialMechanicDesc": "分裂：第2回合分裂，生成2个5HP的小型史莱姆"
+    },
+    {
+      "id": "zombie",
+      "enemyName": "丧尸",
+      "type": "Normal",
+      "maxHp": 35,
+      "chapter1Hp": 35,
+      "chapter2Hp": 52,
+      "baseDamage": 12,
+      "blockAmount": 8,
+      "actionPattern": [
+        { "turn": 1, "intent": { "type": "Attack", "value": 12, "times": 1, "description": "攻击 12" } },
+        { "turn": 2, "intent": { "type": "Defend", "value": 8, "times": 1, "description": "防御 +8 格挡" } },
+        { "turn": 3, "intent": { "type": "Attack", "value": 12, "times": 1, "description": "攻击 12" } },
+        { "turn": 4, "intent": { "type": "Heal", "value": 5, "times": 1, "description": "回复 5 HP" } }
+      ],
+      "description": "持久的丧尸战士，会防御和回复",
+      "spritePath": "Sprites/Enemies/Zombie",
+      "hasSpecialMechanic": false,
+      "specialMechanicDesc": ""
+    }
+  ],
+
+  "eliteEnemies": [
+    {
+      "id": "goblin_chief",
+      "enemyName": "哥布林首领",
+      "type": "Elite",
+      "maxHp": 60,
+      "chapter1Hp": 60,
+      "chapter2Hp": 90,
+      "baseDamage": 15,
+      "blockAmount": 10,
+      "actionPattern": [
+        { "turn": 1, "intent": { "type": "Attack", "value": 15, "times": 1, "description": "攻击 15" } },
+        { "turn": 2, "intent": { "type": "Attack", "value": 15, "times": 1, "description": "攻击 15" } },
+        { "turn": 3, "intent": { "type": "Special", "value": 0, "times": 0, "description": "召唤哥布林!" } },
+        { "turn": 4, "intent": { "type": "Attack", "value": 25, "times": 1, "description": "狂暴攻击 25!" } }
+      ],
+      "description": "强大的哥布林首领，会召唤手下",
+      "spritePath": "Sprites/Enemies/GoblinChief",
+      "hasSpecialMechanic": true,
+      "specialMechanicDesc": "召唤：每2回合(第3回合)召唤1个5HP的哥布林仆从"
+    },
+    {
+      "id": "skeleton_mage",
+      "enemyName": "骷髅法师",
+      "type": "Elite",
+      "maxHp": 50,
+      "chapter1Hp": 50,
+      "chapter2Hp": 75,
+      "baseDamage": 25,
+      "blockAmount": 0,
+      "actionPattern": [
+        { "turn": 1, "intent": { "type": "Attack", "value": 8, "times": 1, "description": "攻击 8" } },
+        { "turn": 2, "intent": { "type": "Debuff", "value": 0, "times": 1, "description": "施加诅咒! 你获得易伤" } },
+        { "turn": 3, "intent": { "type": "Attack", "value": 8, "times": 1, "description": "攻击 8" } },
+        { "turn": 4, "intent": { "type": "Special", "value": 25, "times": 1, "description": "大爆炸! 25 伤害" } }
+      ],
+      "description": "危险的骷髅法师，会诅咒和全屏攻击",
+      "spritePath": "Sprites/Enemies/SkeletonMage",
+      "hasSpecialMechanic": true,
+      "specialMechanicDesc": "诅咒：第2回合给玩家施加易伤状态；大爆炸：第4回合全屏攻击25伤害"
+    },
+    {
+      "id": "bat_king",
+      "enemyName": "蝙蝠王",
+      "type": "Elite",
+      "maxHp": 55,
+      "chapter1Hp": 55,
+      "chapter2Hp": 82,
+      "baseDamage": 15,
+      "blockAmount": 0,
+      "actionPattern": [
+        { "turn": 1, "intent": { "type": "MultiAttack", "value": 6, "times": 3, "description": "多段攻击 6x3" } },
+        { "turn": 2, "intent": { "type": "Special", "value": 0, "times": 0, "description": "闪避中... 下回合无法被攻击" } },
+        { "turn": 3, "intent": { "type": "MultiAttack", "value": 8, "times": 4, "description": "狂暴多段 8x4!" } },
+        { "turn": 4, "intent": { "type": "Attack", "value": 15, "times": 1, "description": "攻击 15" } }
+      ],
+      "description": "狡诈的蝙蝠王，会闪避玩家的攻击",
+      "spritePath": "Sprites/Enemies/BatKing",
+      "hasSpecialMechanic": true,
+      "specialMechanicDesc": "闪避：第2回合闪避所有攻击，无法被选中"
+    }
+  ],
+
+  "bosses": [
+    {
+      "id": "abyss_lord",
+      "bossName": "深渊领主",
+      "maxHp": 150,
+      "phases": [
+        {
+          "phaseId": 1,
+          "hpThreshold": 150,
+          "phasePattern": [
+            { "turn": 1, "intent": { "type": "Debuff", "value": 3, "times": 1, "description": "血契诅咒! 你获得 3 层血债" } },
+            { "turn": 2, "intent": { "type": "Attack", "value": 15, "times": 1, "description": "暗影打击 15" } },
+            { "turn": 3, "intent": { "type": "Special", "value": 0, "times": 1, "description": "血债收割 (根据你的血债层数)" } },
+            { "turn": 4, "intent": { "type": "Buff", "value": 0, "times": 1, "description": "蓄力中..." } },
+            { "turn": 5, "intent": { "type": "Attack", "value": 25, "times": 1, "description": "鲜血盛宴! 25伤害 + 回复25HP" } }
+          ],
+          "phaseDescription": "深渊领主的第一阶段，他会使用血契诅咒和血债收割"
+        },
+        {
+          "phaseId": 2,
+          "hpThreshold": 100,
+          "phasePattern": [
+            { "turn": 1, "intent": { "type": "Debuff", "value": 5, "times": 1, "description": "血债传染! 你获得 5 层血债" } },
+            { "turn": 2, "intent": { "type": "MultiAttack", "value": 12, "times": 2, "description": "暗影打击 x2 (12x2)" } },
+            { "turn": 3, "intent": { "type": "Special", "value": 0, "times": 1, "description": "血之锁链! 你获得3层血债，本回合无法获得格挡" } },
+            { "turn": 4, "intent": { "type": "Special", "value": 0, "times": 1, "description": "血债收割 EX! (根据你的血债层数x2)" } },
+            { "turn": 5, "intent": { "type": "Attack", "value": 30, "times": 1, "description": "鲜血仪式! 30伤害 + 回复30HP" } }
+          ],
+          "phaseDescription": "深渊领主进入狂暴状态，血债传染翻倍!"
+        }
+      ],
+      "usesBloodDebtMechanic": true,
+      "description": "深渊的统治者，掌控血契之力的古老存在",
+      "spritePath": "Sprites/Enemies/AbyssLord"
+    }
+  ]
+}
